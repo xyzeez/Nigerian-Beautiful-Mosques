@@ -210,7 +210,8 @@
   }
 
   .hero__img {
-    width: 500px;
+    width: 100%;
+    max-width: 270px;
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: left center;
@@ -219,6 +220,13 @@
 
   .hero__btn {
     margin-top: 0.5rem;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .main__section {
@@ -239,11 +247,13 @@
     font-size: 24px;
     color: var(--green);
     text-align: center;
+    max-width: 30ch;
   }
 
   .mosques__inner {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 3rem;
     align-items: center;
     justify-content: center;
@@ -252,6 +262,10 @@
   .mosques__container {
     display: flex;
     flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: min(100%, 300px);
     text-align: center;
     border: 1px solid transparent;
     border-radius: 10px;
@@ -271,6 +285,10 @@
   }
 
   .quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     padding-top: 3rem;
     padding-bottom: 3rem;
     background-color: var(--green);
@@ -287,6 +305,7 @@
     font-size: 1.5rem;
     text-align: justify;
     color: var(--white);
+    max-width: 40ch;
   }
 
   .quote__cite {
@@ -299,6 +318,7 @@
   .contact {
     padding-top: 4rem;
     padding-bottom: 4rem;
+    width: 100%;
   }
 
   .contact__inner {
@@ -308,7 +328,9 @@
     justify-content: center;
     gap: 1.2rem;
     text-align: center;
+    width: min(100%, 600px);
     padding: 2rem 1rem;
+    margin: auto;
     border-radius: 10px;
     background-color: var(--green);
     background: var(--green_gradient);
@@ -317,15 +339,18 @@
   .contact__content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
 
   .contact__heading {
     color: var(--white);
+    max-width: 25ch;
   }
 
   .contact__paragraph {
     color: var(--light_white);
+    max-width: 40ch;
   }
 
   .footer {
@@ -342,6 +367,18 @@
     font-size: 12px;
     text-align: center;
     color: var(--light_white);
+  }
+
+  @media screen and (min-width: 650px) {
+
+    .hero {
+        flex-direction: row;
+    }
+
+    .mosques__container {
+        flex-grow: 1;
+    }
+
   }
 
 
