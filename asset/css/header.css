@@ -45,8 +45,9 @@ header {
     height: max-content;
     width: 100%;
     padding: 2rem;
-    z-index: -10;
+    z-index: -1000;
     background-color: var(--green);
+    background-color: red;
   }
 
   .menu__toggle:checked ~ .menu__list {
