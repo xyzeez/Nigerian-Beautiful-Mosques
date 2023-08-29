@@ -47,8 +47,6 @@ header {
     padding: 2rem;
     z-index: -1000;
     background-color: var(--green);
-    background-color: red;
-  }
 
   .menu__toggle:checked ~ .menu__list {
     display: flex;
