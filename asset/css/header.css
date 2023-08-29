@@ -60,10 +60,10 @@ header {
 
   @keyframes drop-menu {
     from {
-        transform: translateY(-200%);
+        transform: translateX(200%);
     }
     to {
-        transform: translateY(0%);
+        transform: translateX(0%);
     }
   }
 
